@@ -22,7 +22,9 @@
             'deep-gray': '#0A0A0F',
             'light-dark': '#313131',
             'dark': '#101017',
-            'deep-dark': '#050507',
+            'deep-dark': 'white',
+            'dark-purple' : "#000235",
+            'btn_primary' : " #3de397"
           }
         },
       }
@@ -41,29 +43,31 @@
                 <div class="hidden sm:block ml:auto">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#" class="text-white hover:underline px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="#" class="text-white hover:underline px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="#" class="text-white hover:underline px-3 py-2 text-sm font-medium">Work</a>
-                        <a href="#" class="text-white hover:underline px-3 py-2 text-sm font-medium">About Me</a>
-                        <a href="#" class="text-white border border-primary px-4 rounded-none py-[10px] py-[10px] hover:bg-primary text-sm font-medium">Contact</a>
+                        <a href="#aboutme" class="text-white hover:underline px-3 py-2 text-sm font-medium">About Me</a>
+                        <a href="#Skills" class="text-white hover:underline px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#work" class="text-white hover:underline px-3 py-2 text-sm font-medium">Work</a>
+                        <a href="#contact" class="text-white border border-primary px-4 rounded-none py-[10px] py-[10px] hover:bg-primary text-sm font-medium">Contact</a>
                     </div>
                 </div>
+
+
                 <!-- mobile-menu-button -->
-                <div class="sm-hidden flex items-center">
+                <div class="sm-hidden flex items-center lg:hidden">
                     <button id="mobile-menu-btn" type="button" class="text-white hover:text-light-gray focus:outline-none
-                    focus:text-light-gray" arial-label="Toggle menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    focus:text-light-gray  " arial-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5 " />
                       </svg> 
                 </button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu" class="hidden sm-hidden">
-            <div class="px-2 pt pb-3 space-y-1">
+            <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Home</a>
-                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Services</a>
+                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">About Me</a>
+                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Skills</a>
                 <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">Work</a>
-                <a href="#" class="text-white hover:underline block px-3 py-2 text-base font-medium">About</a>
                 <div class="px-2">
                     <a href="" class="text-white border border-primary block px-3 py-2 rounded-none text-base font-medium hover:bg-primary
                      focus:bg-primary mt-4">Contact</a>
@@ -75,14 +79,14 @@
 
 
     <!-- hero section -->
-    <section class="hero text-white py-28" >
-      <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero text-white py-28 " id="aboutme" >
+      <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <h4 class="text-2xl font-bold text-primary lg:leading-[94px] lg-text-[38px]">Hello, My Name is Daniel Omoanon</h4>
         <h1 class="text-5xl mt-3 font-bold lg:text-[88px] lg:leading-[94px]"><span id="typed"></span></h1>
         <p class="mt-4 text-gray font-normal text-base w-full lg:w-3/6 mt-9">I am a Backend Developer I handle the server- side logic which involves processing data and managing databases <a href="#"><span class="underline font-semibold">Daniel </span></a>I am a Software Engineer and a UI/UX Designer </p>
          <div class="mt-9">
           <div class="mt-5 flex items-center gap-3">
-            <a href="#" class="btn-primary bg-primary test-white rounded-none py-3 px-6 text-lg font-medium mr-4">Email Me</a>
+            <a href="www.google.com" class="btn-primary bg-primary test-white rounded-none py-3 px-6 text-lg font-medium mr-4">Email Me</a>
             <a href="" class="flex item-center text-gray font-bold text-lg">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -91,10 +95,11 @@
             </a>           
           </div>
          </div>
+         <img src="images/hit.png" class="w-full xl:w-1/3 xl:absolute top-0 sm-3 pt-5 right-20 rounded-3xl">
       </div>
     </section>
      <!-- skills section -->
-     <section class="text-gray pt-10 min-h-[70vh]" id="skill">
+     <section class="text-gray pt-10 min-h-[70vh]" id="Skills">
       <div class="w-[87%] mx-auto">
         <h2
           class="text-4xl font-bold mb-5 border-b-[5px] w-[100px] border-[green] pb-2 lg:pt-10 pt-0 text-left"
@@ -115,13 +120,30 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="white"/>
             </svg>
             
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#131313" d="M89.234 5.856H81.85l7.679 8.333v3.967H73.713v-4.645h7.678l-7.678-8.333V1.207h15.521v4.649zm-18.657 0h-7.384l7.679 8.333v3.967H55.055v-4.645h7.679l-7.679-8.333V1.207h15.522v4.649zm-18.474.19h-7.968v7.271h7.968v4.839H38.471V1.207h13.632v4.839z"/><path fill="#1572B6" d="M27.613 116.706l-8.097-90.813h88.967l-8.104 90.798-36.434 10.102-36.332-10.087z"/><path fill="#33A9DC" d="M64.001 119.072l29.439-8.162 6.926-77.591H64.001v85.753z"/><path fill="#fff" d="M64 66.22h14.738l1.019-11.405H64V43.677h27.929l-.267 2.988-2.737 30.692H64V66.22z"/><path fill="#EBEBEB" d="M64.067 95.146l-.049.014-12.404-3.35-.794-8.883H39.641l1.561 17.488 22.814 6.333.052-.015V95.146z"/><path fill="#fff" d="M77.792 76.886L76.45 91.802l-12.422 3.353v11.588l22.833-6.328.168-1.882 1.938-21.647H77.792z"/><path fill="#EBEBEB" d="M64.039 43.677v11.137H37.136l-.224-2.503-.507-5.646-.267-2.988h27.901zM64 66.221v11.138H51.753l-.223-2.503-.508-5.647-.267-2.988H64z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#131313" d="M89.234 5.856H81.85l7.679 8.333v3.967H73.713v-4.645h7.678l-7.678-8.333V1.207h15.521v4.649zm-18.657 0h-7.384l7.679 8.333v3.967H55.055v-4.645h7.679l-7.679-8.333V1.207h15.522v4.649zm-18.474.19h-7.968v7.271h7.968v4.839H38.471V1.207h13.632v4.839z"/><path fill="#1572B6" d="M27.613 116.706l-8.097-90.813h88.967l-8.104 90.798-36.434 10.102-36.332-10.087z"/><path fill="#33A9DC" d="M64.001 119.072l29.439-8.162 6.926-77.591H64.001v85.753z"/><path fill="#fff" d="M64 66.22h14.738l1.019-11.405H64V43.677h27.929l-.267 2.988-2.737 30.692H64V66.22z"/><path fill="#EBEBEB" d="M64.067 95.146l-.049.014-12.404-3.35-.794-8.883H39.641l1.561 17.488 22.814 6.333.052-.015V95.146z"/><path fill="#fff" d="M77.792 76.886L76.45 91.802l-12.422 3.353v11.588l22.833-6.328.168-1.882 1.938-21.647H77.792z"/><path fill="#EBEBEB" d="M64.039 43.677v11.137H37.136l-.224-2.503-.507-5.646-.267-2.988h27.901zM64 66.221v11.138H51.753l-.223-2.503-.508-5.647-.267-2.988H64z"/></svg>  
+            <?xml version="1.0" encoding="UTF-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 -224 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+    <defs>
+        <linearGradient x1="-2.77777778%" y1="32%" x2="100%" y2="67.5555556%" id="linearGradient-1">
+            <stop stop-color="#2298BD" offset="0%">
+</stop>
+            <stop stop-color="#0ED7B5" offset="100%">
+</stop>
+        </linearGradient>
+    </defs>
+		<g>
+				<path d="M52.8666139,-1.0658141e-14 C38.7688502,-1.0658141e-14 29.9577479,7.04888185 26.4333069,21.1466456 C31.7199683,14.0977637 37.88774,11.454433 44.9366218,13.2166535 C48.9584005,14.2220981 51.8329737,17.1397478 55.0147606,20.3695063 C60.1980384,25.6307134 66.1970285,31.7199683 79.2999208,31.7199683 C93.3976845,31.7199683 102.208787,24.6710865 105.733228,10.5733228 C100.446566,17.6222046 94.2787948,20.2655353 87.2299129,18.5033149 C83.2081342,17.4978702 80.333561,14.5802205 77.1517741,11.350462 C71.9684963,6.08925491 65.9695062,-1.0658141e-14 52.8666139,-1.0658141e-14 Z M26.4333069,31.7199683 C12.3355432,31.7199683 3.52444093,38.7688502 0,52.8666139 C5.28666139,45.817732 11.454433,43.1744013 18.5033149,44.9366218 C22.5250936,45.9420665 25.3996667,48.8597162 28.5814537,52.0894747 C33.7647315,57.3506818 39.7637215,63.4399367 52.8666139,63.4399367 C66.9643776,63.4399367 75.7754799,56.3910548 79.2999208,42.2932911 C74.0132594,49.342173 67.8454878,51.9855037 60.796606,50.2232832 C56.7748273,49.2178385 53.9002541,46.3001888 50.7184671,43.0704303 C45.5351894,37.8092232 39.5361993,31.7199683 26.4333069,31.7199683 Z" fill="url(#linearGradient-1)">
+</path>
+				<path d="M158.59201,26.7309264 L149.365806,26.7309264 L149.365806,44.5880938 C149.365806,49.350005 152.490811,49.2756002 158.59201,48.9779807 L158.59201,56.1952525 C146.240802,57.6833498 141.330081,54.2607261 141.330081,44.5880938 L141.330081,26.7309264 L134.484834,26.7309264 L134.484834,18.9928205 L141.330081,18.9928205 L141.330081,8.9990725 L149.365806,6.61811685 L149.365806,18.9928205 L158.59201,18.9928205 L158.59201,26.7309264 Z M193.762014,18.9928205 L201.797739,18.9928205 L201.797739,56.1952525 L193.762014,56.1952525 L193.762014,50.8381023 C190.934629,54.7815601 186.544742,57.1625158 180.741163,57.1625158 C170.622101,57.1625158 162.214352,48.6059564 162.214352,37.5940365 C162.214352,26.5077118 170.622101,18.0255573 180.741163,18.0255573 C186.544742,18.0255573 190.934629,20.406513 193.762014,24.2755659 L193.762014,18.9928205 Z M182.006045,49.4988148 C188.702483,49.4988148 193.762014,44.5136889 193.762014,37.5940365 C193.762014,30.6743842 188.702483,25.6892583 182.006045,25.6892583 C175.309608,25.6892583 170.250077,30.6743842 170.250077,37.5940365 C170.250077,44.5136889 175.309608,49.4988148 182.006045,49.4988148 Z M215.190615,13.4124557 C212.36323,13.4124557 210.056679,11.0315001 210.056679,8.27852013 C210.056679,5.4511353 212.36323,3.14458451 215.190615,3.14458451 C218.018,3.14458451 220.32455,5.4511353 220.32455,8.27852013 C220.32455,11.0315001 218.018,13.4124557 215.190615,13.4124557 Z M211.172752,56.1952525 L211.172752,18.9928205 L219.208477,18.9928205 L219.208477,56.1952525 L211.172752,56.1952525 Z M228.509085,56.1952525 L228.509085,1.87970183 L236.544811,1.87970183 L236.544811,56.1952525 L228.509085,56.1952525 Z M288.70262,18.9928205 L297.184775,18.9928205 L285.503211,56.1952525 L277.616296,56.1952525 L269.87819,31.1208134 L262.065679,56.1952525 L254.178764,56.1952525 L242.4972,18.9928205 L250.979354,18.9928205 L258.196626,44.6624986 L266.009137,18.9928205 L273.672838,18.9928205 L281.410944,44.6624986 L288.70262,18.9928205 Z M307.155027,13.4124557 C304.327642,13.4124557 302.021091,11.0315001 302.021091,8.27852013 C302.021091,5.4511353 304.327642,3.14458451 307.155027,3.14458451 C309.982411,3.14458451 312.288962,5.4511353 312.288962,8.27852013 C312.288962,11.0315001 309.982411,13.4124557 307.155027,13.4124557 Z M303.137164,56.1952525 L303.137164,18.9928205 L311.172889,18.9928205 L311.172889,56.1952525 L303.137164,56.1952525 Z M340.041977,18.0255573 C348.375321,18.0255573 354.32771,23.680327 354.32771,33.3529593 L354.32771,56.1952525 L346.291985,56.1952525 L346.291985,34.1714128 C346.291985,28.5166431 343.018171,25.5404486 337.95864,25.5404486 C332.675895,25.5404486 328.509223,28.6654529 328.509223,36.254749 L328.509223,56.1952525 L320.473497,56.1952525 L320.473497,18.9928205 L328.509223,18.9928205 L328.509223,23.7547318 C330.964583,19.8856789 334.982446,18.0255573 340.041977,18.0255573 Z M392.423001,4.11184775 L400.458726,4.11184775 L400.458726,56.1952525 L392.423001,56.1952525 L392.423001,50.8381023 C389.595616,54.7815601 385.205729,57.1625158 379.40215,57.1625158 C369.283088,57.1625158 360.875338,48.6059564 360.875338,37.5940365 C360.875338,26.5077118 369.283088,18.0255573 379.40215,18.0255573 C385.205729,18.0255573 389.595616,20.406513 392.423001,24.2755659 L392.423001,4.11184775 Z M380.667032,49.4988148 C387.36347,49.4988148 392.423001,44.5136889 392.423001,37.5940365 C392.423001,30.6743842 387.36347,25.6892583 380.667032,25.6892583 C373.970595,25.6892583 368.911064,30.6743842 368.911064,37.5940365 C368.911064,44.5136889 373.970595,49.4988148 380.667032,49.4988148 Z M427.393287,57.1625158 C416.158152,57.1625158 407.750403,48.6059564 407.750403,37.5940365 C407.750403,26.5077118 416.158152,18.0255573 427.393287,18.0255573 C434.684964,18.0255573 441.009377,21.8202054 443.985572,27.6237848 L437.065919,31.6416474 C435.429012,28.1446188 431.783174,25.9124729 427.318882,25.9124729 C420.771254,25.9124729 415.786128,30.8975988 415.786128,37.5940365 C415.786128,44.2904743 420.771254,49.2756002 427.318882,49.2756002 C431.783174,49.2756002 435.429012,46.9690494 437.214729,43.5464257 L444.134381,47.4898834 C441.009377,53.3678677 434.684964,57.1625158 427.393287,57.1625158 Z M457.378447,29.2606918 C457.378447,36.0315344 477.393355,31.9392669 477.393355,45.7041667 C477.393355,53.1446531 470.920132,57.1625158 462.884407,57.1625158 C455.443921,57.1625158 450.08677,53.8142969 447.705815,48.4571467 L454.625467,44.439284 C455.815945,47.7875029 458.792139,49.7964342 462.884407,49.7964342 C466.45584,49.7964342 469.20882,48.6059564 469.20882,45.6297618 C469.20882,39.007729 449.193912,42.7279722 449.193912,29.4095015 C449.193912,22.4154443 455.220706,18.0255573 462.810002,18.0255573 C468.911201,18.0255573 473.970732,20.8529421 476.574902,25.7636632 L469.804059,29.5583112 C468.464772,26.6565215 465.860602,25.317234 462.810002,25.317234 C459.908212,25.317234 457.378447,26.5821167 457.378447,29.2606918 Z M491.679089,29.2606918 C491.679089,36.0315344 511.693998,31.9392669 511.693998,45.7041667 C511.693998,53.1446531 505.220775,57.1625158 497.185049,57.1625158 C489.744563,57.1625158 484.387413,53.8142969 482.006457,48.4571467 L488.926109,44.439284 C490.116587,47.7875029 493.092782,49.7964342 497.185049,49.7964342 C500.756483,49.7964342 503.509463,48.6059564 503.509463,45.6297618 C503.509463,39.007729 483.494554,42.7279722 483.494554,29.4095015 C483.494554,22.4154443 489.521348,18.0255573 497.110644,18.0255573 C503.211843,18.0255573 508.271374,20.8529421 510.875544,25.7636632 L504.104702,29.5583112 C502.765414,26.6565215 500.161244,25.317234 497.110644,25.317234 C494.208855,25.317234 491.679089,26.5821167 491.679089,29.2606918 Z" fill="#2D3748">
+</path>
+		</g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg> 
           </div>
       </div>
     </section>
 
-    <section class="work mt-20 py-28 bg-light-dark">
+    <section class="work mt-20 py-28 bg-light-dark" id="work" >
       <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="block md:flex items-center justify-between">
           <div>
@@ -135,14 +157,14 @@
             <a href="" class="text-white border border-primary px-3 py-2 rounded-none text-base font-medium hover:bg-primary focus:bg-primary mt-4">View All Project</a>
           </div>
         </div>
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex flex-wrap -mx-4 pb-6">
           <div class="w-full md:w-1/2 px-4 mt-15">
             <div class="relative">
-              <img src="./images/biogr.png" alt="" class="w-full grayscale">
+              <img src="./images/h.png" alt="" class="w-full grayscale">
             </div>
-            <h5 class="text-[28px] font-semibold text-white mt-9">My Biography</h5>
-            <a href="https://playful-fox-5528f5.netlify.app/" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
-              <span class="mr-2 hover:underline">See Project</span>
+            <h5 class="text-[28px] font-semibold text-white mt-9">Brontek Hotel</h5>
+            <a href="https://brontek-hotel-w76s.vercel.app" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
+              <span class="mr-2 pt-6 hover:underline">See Project</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
@@ -150,81 +172,48 @@
             </div>
             <div class="w-full md:w-1/2 px-4 mt-15">
               <div class="relative">
-                <img src="./images/biogr.png" alt="" class="w-[500px] grayscale">
+                <img src="./images/live.png" alt="" class="w-full grayscale">
               </div>
-              <h5 class="text-[28px] font-semibold text-white mt-9">My Biography</h5>
-              <a href="https://playful-fox-5528f5.netlify.app/" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
-                <span class="mr-2 hover:underline">See Project</span>
+              <h5 class="text-[28px] font-semibold text-white mt-9">live user</h5>
+              <a href="https://live-user-sage.vercel.app" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
+                <span class="mr-2 pt-6 hover:underline">See Project</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                 </svg>
               </a>
               </div>
              </div>
-              <div
-          class="flex flex-col mx-auto text-center justify-center items-center"
-        >
-          <h2 class="pb-8">I have experience with these technologies</h2>
-
-          <div
-            class="flex flex-wrap flex-row gap-8 mx-auto justify-center lg:gap-6 lg:gap-y-8 gap-y-8"
-          >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#131313" d="M89.234 5.856H81.85l7.679 8.333v3.967H73.713v-4.645h7.678l-7.678-8.333V1.207h15.521v4.649zm-18.657 0h-7.384l7.679 8.333v3.967H55.055v-4.645h7.679l-7.679-8.333V1.207h15.522v4.649zm-18.474.19h-7.968v7.271h7.968v4.839H38.471V1.207h13.632v4.839z"/><path fill="#1572B6" d="M27.613 116.706l-8.097-90.813h88.967l-8.104 90.798-36.434 10.102-36.332-10.087z"/><path fill="#33A9DC" d="M64.001 119.072l29.439-8.162 6.926-77.591H64.001v85.753z"/><path fill="#fff" d="M64 66.22h14.738l1.019-11.405H64V43.677h27.929l-.267 2.988-2.737 30.692H64V66.22z"/><path fill="#EBEBEB" d="M64.067 95.146l-.049.014-12.404-3.35-.794-8.883H39.641l1.561 17.488 22.814 6.333.052-.015V95.146z"/><path fill="#fff" d="M77.792 76.886L76.45 91.802l-12.422 3.353v11.588l22.833-6.328.168-1.882 1.938-21.647H77.792z"/><path fill="#EBEBEB" d="M64.039 43.677v11.137H37.136l-.224-2.503-.507-5.646-.267-2.988h27.901zM64 66.221v11.138H51.753l-.223-2.503-.508-5.647-.267-2.988H64z"/></svg> 
-          <svg width="900" height="900" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="white"/>
-            </svg>
-            
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#131313" d="M89.234 5.856H81.85l7.679 8.333v3.967H73.713v-4.645h7.678l-7.678-8.333V1.207h15.521v4.649zm-18.657 0h-7.384l7.679 8.333v3.967H55.055v-4.645h7.679l-7.679-8.333V1.207h15.522v4.649zm-18.474.19h-7.968v7.271h7.968v4.839H38.471V1.207h13.632v4.839z"/><path fill="#1572B6" d="M27.613 116.706l-8.097-90.813h88.967l-8.104 90.798-36.434 10.102-36.332-10.087z"/><path fill="#33A9DC" d="M64.001 119.072l29.439-8.162 6.926-77.591H64.001v85.753z"/><path fill="#fff" d="M64 66.22h14.738l1.019-11.405H64V43.677h27.929l-.267 2.988-2.737 30.692H64V66.22z"/><path fill="#EBEBEB" d="M64.067 95.146l-.049.014-12.404-3.35-.794-8.883H39.641l1.561 17.488 22.814 6.333.052-.015V95.146z"/><path fill="#fff" d="M77.792 76.886L76.45 91.802l-12.422 3.353v11.588l22.833-6.328.168-1.882 1.938-21.647H77.792z"/><path fill="#EBEBEB" d="M64.039 43.677v11.137H37.136l-.224-2.503-.507-5.646-.267-2.988h27.901zM64 66.221v11.138H51.753l-.223-2.503-.508-5.647-.267-2.988H64z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#131313" d="M89.234 5.856H81.85l7.679 8.333v3.967H73.713v-4.645h7.678l-7.678-8.333V1.207h15.521v4.649zm-18.657 0h-7.384l7.679 8.333v3.967H55.055v-4.645h7.679l-7.679-8.333V1.207h15.522v4.649zm-18.474.19h-7.968v7.271h7.968v4.839H38.471V1.207h13.632v4.839z"/><path fill="#1572B6" d="M27.613 116.706l-8.097-90.813h88.967l-8.104 90.798-36.434 10.102-36.332-10.087z"/><path fill="#33A9DC" d="M64.001 119.072l29.439-8.162 6.926-77.591H64.001v85.753z"/><path fill="#fff" d="M64 66.22h14.738l1.019-11.405H64V43.677h27.929l-.267 2.988-2.737 30.692H64V66.22z"/><path fill="#EBEBEB" d="M64.067 95.146l-.049.014-12.404-3.35-.794-8.883H39.641l1.561 17.488 22.814 6.333.052-.015V95.146z"/><path fill="#fff" d="M77.792 76.886L76.45 91.802l-12.422 3.353v11.588l22.833-6.328.168-1.882 1.938-21.647H77.792z"/><path fill="#EBEBEB" d="M64.039 43.677v11.137H37.136l-.224-2.503-.507-5.646-.267-2.988h27.901zM64 66.221v11.138H51.753l-.223-2.503-.508-5.647-.267-2.988H64z"/></svg>  
-          </div>
-      </div>
+             <div class="flex flex-wrap -mx-4">
+              <div class="w-full md:w-1/2 px-4 mt-15">
+                <div class="relative">
+                  <img src="./images/biogr.png" alt="" class="w-full grayscale">
+                </div>
+                <h5 class="text-[28px] font-semibold text-white mt-9">My Biography</h5>
+                <a href="https://playful-fox-5528f5.netlify.app/" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
+                  <span class="mr-2 pb-6 ">See Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                </a>
+                </div>
+                <div class="w-full md:w-1/2 px-4 mt-15">
+                  <div class="relative">
+                    <img src="./images/he.png" alt="" class="w-full grayscale">
+                  </div>
+                  <h5 class="text-[28px] font-semibold text-white mt-9">Calculator</h5>
+                  <a href="https://https://my-javascript-calcu.vercel.app/" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
+                    <span class="mr-2 hover:underline">See Project</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                  </a>
+                  </div>
+                 </div>
     </section>
 
-    <section class="work mt-20 py-28 bg-light-dark">
-      <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="block md:flex items-center justify-between">
-          <div>
-            <div class="flex items-center">
-              <hr class="w-14 border-t-2 border-primary mr-4">
-              <h6 class="text-primary font-bold text-xl mr-4">Recent work</h6>
-            </div>
-            <h2 class="text-white text-3xl lg:text-5xl font-bold mb-2 md:w-3/4 mt-4">Some of my favorites projects</h2>
-          </div>
-          <div class="mt-6 md:mt-0">
-            <a href="" class="text-white border border-primary px-3 py-2 rounded-none text-base font-medium hover:bg-primary focus:bg-primary mt-4">View All Project</a>
-          </div>
-        </div>
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 mt-15">
-            <div class="relative">
-              <img src="./images/biogr.png" alt="" class="w-full grayscale">
-            </div>
-            <h5 class="text-[28px] font-semibold text-white mt-9">My Biography</h5>
-            <a href="https://playful-fox-5528f5.netlify.app/" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
-              <span class="mr-2 hover:underline">See Project</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </a>
-            </div>
-            <div class="w-full md:w-1/2 px-4 mt-15">
-              <div class="relative">
-                <img src="./images/biogr.png" alt="" class="w-[500px] grayscale">
-              </div>
-              <h5 class="text-[28px] font-semibold text-white mt-9">My Biography</h5>
-              <a href="https://playful-fox-5528f5.netlify.app/" target="_blank" class="flex items-center text-primary font-medium text-xl mt-2">
-                <span class="mr-2 hover:underline">See Project</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
-              </a>
-              </div>
-             </div>
-        </div>
-    </section>
-
+  
     <!-- testimonials -->
-    <section class="testimonials py-28">
+    <!-- <section class="testimonials py-28">
       <div class="container max-w-xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-center">
           <hr class="w-14 border-t-2 border-primary mr-4">
@@ -236,8 +225,9 @@
               <p class="text-gray mt-20">"wow is all i can say" i was opportuned to have worked with Daniel and his delivery is top notch 
               </p>
               <div class="flex items-center justify-center gap-5 mt-9 ">
-                <img src="./images/monalisa.png" alt="" class="rounded-full ">
-                <div><h6 class="text-white font-semibold text-x1">Daniel James</h6>
+                <img src="./images/hit.png" alt="" class="rounded-full ">
+                <div>
+                  <h6 class="text-white font-semibold text-x1">Daniel James</h6>
                   <p class="text-gray text-sm ml-[12px]" > Project Manager,<span class="font-bold">Ruber</span></p>
 
                 </div>
@@ -256,7 +246,52 @@
           </div>
       </div>
       <div class="owl-dots dots-container"></div>
-    </section>
+    </section> -->
+
+
+
+    <!-- testimonials -->
+    <div class="text-center py-10">
+      <h5 class="text-white">Testimonials</h5>
+      <h1 class="text-4xl w-96 mx-auto text-white font-bold mb-12">
+        Read What others have to say
+      </h1>
+      <div class="flex max-w-5xl mx-auto gap-8">
+        <div class="bg-gray p-8 rounded-xl mix-bend-luminosity">
+          <img src="images/nicooo.jpg" class="mx-auto h-20 rounded-full " />
+          <h4 class="uppercase text-x1 font-bold">Vick james</h4>
+          <p class="text-sm leading-7 my-3 font-light
+          opacity-50">
+            wow is all i can say" i was opportuned to have worked with Daniel and his delivery is top notch 
+          </p>
+          <button class="bg-btn_primary py-2.5 px-8 rounded-full">
+            Get in touch
+          </button>
+        </div>
+        <div class="bg-gray p-8 rounded-xl mix-bend-luminosity">
+          <img src="images/nico.jpg" class="mx-auto h-20 rounded-full" />
+          <h4 class="uppercase text-x1 font-bold text-white">Penniel james</h4>
+          <p class="text-sm leading-7 my-3 font-light
+          opacity-50">
+          Excellent Job done by Mr Daniel the founder of supreme solutions i highly recommend his work for every one thinking of building a website 
+          </p>
+          <button class="bg-btn_primary py-2.5 px-8 rounded-full">
+            Get in touch
+          </button>
+        </div>
+        <div class="bg-gray p-8 rounded-xl mix-bend-luminosity">
+          <img src="images/nicoo.jpg" class="mx-auto h-20 rounded-full "/>
+          <h4 class="uppercase text-x1 font-bold">Ruth james</h4>
+          <p class="text-sm leading-7 my-3 font-light
+          opacity-50">
+            wow is all i can say" i was opportuned to have worked with Daniel and his delivery is top notch 
+          </p>
+          <button class="bg-btn_primary py-2.5 px-8 rounded-full">
+            Get in touch
+          </button>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -311,9 +346,47 @@
         </div>
       </div>
     </section>
-    <script src="https://code.jquery.com/jquery/3.7.0/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery/3.7.0/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#mobile-menu-btn").click(function () {
+          $("#mobile-menu").slideToggle();
+      });
+       
+        });
+    </script>
+    <script>
+      var typed = new Typed('#typed', {
+        strings: ['Backend Developer', 'UI/UX Designer'],
+        typedSpeed:80,
+        backSpeed:50,
+        loop:true
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:true,
+          responsive:{
+            0:{
+              items:1
+            },
+            600:{
+              items:1
+            },
+            1000:{
+              items:1
+            }
+          }
+
+        })
+      })
+    </script>
     
   
 

@@ -36,7 +36,7 @@ svg {
 }
 
 
-.owl-nav span{
+.owl-nav {
     margin-top:20px;
 }
 
@@ -53,6 +53,18 @@ svg {
     justify-content:center ;
 }
 
+.owl-carousel .owl-dots{
+    background:#323232 !important;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.owl-carousel .owl-dots.active{
+background-color: #079211 !important;
+}
 
 
 
